@@ -108,12 +108,7 @@ const arr= [1, 2, [3, 4, [5, 6] ] ]
 const arr1=[]
 function fun1(ele){
 ele.forEach (element=>{
-    if(isNaN(element)){
-        fun1(element)
-    }
-    else{
-        arr1.push(element)
-    }
+    isNaN(element) ? fun1(element) : arr1.push(element)
 } )
 }
 fun1(arr)
