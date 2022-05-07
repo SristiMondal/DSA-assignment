@@ -1,0 +1,122 @@
+
+
+
+
+
+Q -1 >   T(n)=T(n/2)+n^2 
+         
+Ans =   T(n)=1.T(n/2)+n^2 log(0)
+
+		a=1; b=2 ; p=0 ; k=2
+		
+		as a<b^k  =  1<2^2 =1<4  
+		
+		as p>=0
+		
+		then T(n)= n^2 log0
+		         = n^2
+				 
+------------------------------------------------------------------------------------------------------------
+
+Q-2>   T(n)= 16 T(n/4) + n
+
+Ans =  T(n)=16 T(n/4) + n^1 log(0)
+		  
+	a=16 ; b=4 ; k=1 ; p=0
+	
+	as a>b^k  = 16>4^1  = 16>4
+	
+	then T(n)= n log16 base 4
+			 =2n
+			 
+------------------------------------------------------------------------------------------------------------------
+
+Q-3>  T(n)=2T(n/2)
+
+Ans=  T(n)= 2. T(n/2)+0
+
+   n^k logp=0
+   either n^k =0 or logp=0
+   
+   n^k=0
+   klogn=0
+   either k=0 or logn=0
+   
+   
+   if logp=0
+   then p=1
+   
+   a=2 ; b=2 ; p=1  ; k=0
+   
+   
+   ???                               Ans: [n/logn]
+   
+   
+   -----------------------------------------------------------------------------------------------------------------------
+   
+ Q-4>  T(n)= 2^(1/2)T(n/2)+log(n)
+ 
+ Ans=  T(n)= 2^(1/2)T(n/2)+1. logn
+ 
+      a=2^(1/2) ; b=2 ; p=n; 
+	  
+	  n^k=1
+	  klog(n)=log1=0
+	  either k=0 or logn=0
+	  
+	  since logn can't be 0.
+	  
+	  So, k=0=>  then a>b^k
+	  
+	  T(n)=nlog2 base2
+		  =n
+	  
+	  
+-----------------------------------------------------------------------------------------------------------------------
+	  
+Q-5>  Find the sum of all the even numbers in given array.
+
+JS
+--------
+
+const arr=[3,6,13,5,8,6,9]
+const accu=arr.filter((ele)=>ele%2==0).reduce((accumulator,ele)=>accumulator+=ele)
+console.log(accu)
+
+
+Q-6>  Change the first letter into capital for each word of a string.
+
+JS
+----
+
+const str="Thus is my DSA class." 
+let newStr='';
+let arr=str.split(' ');
+arr.forEach(element => newStr+=" "+element.charAt(0).toUpperCase()+element.slice(1));
+let newStr1=newStr.slice(1)
+console.log(newStr1);
+}
+
+-------------------------------------------------------------------------------------------------------------------------- 
+ 
+ Q-7> change a multidimentional array to 1D
+ 
+ input- [1, 2, [3, 4, [5, 6] ] ] 
+ output-[1,2,3,4,5,6]
+ 
+const arr= [1, 2, [3, 4, [5, 6] ] ]
+const arr1=[]
+function fun1(ele){
+ele.forEach (element=>{
+    if(isNaN(element)){
+        fun1(element)
+    }
+    else{
+        arr1.push(element)
+    }
+} )
+}
+fun1(arr)
+console.log(arr1)
+
+-------------------------------------------------------------------------------------------------------------------------------------
