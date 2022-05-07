@@ -39,14 +39,15 @@ Ans=  T(n)= 2. T(n/2)+0
    either n^k =0 or logp=0
    
    n^k=0
-   klogn=0
-   either k=0 or logn=0
+   klogn=log 0
+   klogn=1
+   k=1/logn
    
    
    if logp=0
    then p=1
    
-   a=2 ; b=2 ; p=1  ; k=0
+   a=2 ; b=2 ; p=1  ; k=1/logn
    
    
    ???                               Ans: [n/logn]
